@@ -35,7 +35,13 @@ feo:ButternutSquash
     a food:Food;
     feo:isAvailibleIn feo:Autumn;
     rdfs:label "Butternut Squash" .
- 
+
+feo:Autumn
+	a feo:Season;
+	a feo:SeasonCharacteristic;
+	feo:inRelationshipTo feo:SystemA.
+
+
 
 food:hasIngredient a owl:ObjectProperty .
 feo:isAvailbleIn a owl:ObjectProperty .
