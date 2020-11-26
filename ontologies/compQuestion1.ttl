@@ -59,15 +59,6 @@ feo:Food a owl:class.
 feo:Question a owl:class.
 feo:Food a owl:class.
 
-feo:SeasonCharacteristic rdf:type owl:Class ;
-	owl:equivalentClass [ owl:intersectionOf ( feo:Season
-		[ rdf:type owl:Restriction ;
-			owl:onProperty resource:SIO_000668 ;
-			owl:someValuesFrom feo:System
-		]
-	) ;
-	rdf:type owl:Class] .
-
 
 food:hasIngredient a owl:ObjectProperty.
 feo:isAvailbleIn a owl:ObjectProperty.
