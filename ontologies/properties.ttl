@@ -28,7 +28,6 @@
 
 
 
-
 feo:likes a owl:ObjectProperty;
 	rdfs:subPropertyOf feo:hasCharacteristic .
 
