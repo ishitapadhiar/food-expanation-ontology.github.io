@@ -51,6 +51,13 @@ feo:SystemA rdf:type owl:NamedIndividual ,
 	feo:System ;
 	feo:isInSeason feo:Autumn .
 
+feo:Season rdf:type owl:Class ;
+	rdfs:subClassOf 
+		[ rdf:type owl:Restriction ;
+			owl:onProperty feo:isInternal ;
+			owl:hasValue "false"^^xsd:boolean
+        ] .
+
 
 
 food:hasIngredient a owl:ObjectProperty .
