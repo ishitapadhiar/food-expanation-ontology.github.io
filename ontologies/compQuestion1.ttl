@@ -41,7 +41,9 @@ feo:ButternutSquash
 feo:Autumn
 	a feo:Season;
 	a feo:SeasonCharacteristic;
-	feo:inRelationshipTo feo:SystemA.
+	feo:inRelationTo feo:SystemA.
+
+feo:SystemA a feo:System.
 
 
 
