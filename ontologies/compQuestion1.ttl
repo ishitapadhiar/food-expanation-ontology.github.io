@@ -52,9 +52,7 @@ feo:Autumn
 feo:SystemA
 	a feo:System.
 
-feo:Season a owl:class;
-	feo:isInternal True.
-
+feo:Season a owl:class.
 feo:Food a owl:class.
 feo:Question a owl:class.
 feo:Food a owl:class.
