@@ -26,9 +26,18 @@
 @prefix : <http://www.semanticweb.org/ishitapadhiar/ontologies/2020/10/inferredfeo2> .
 @prefix food: <http://purl.org/heals/food/> .
 
+
+feo:UserA rdf:type owl:NamedIndividual ,
+                   <https://purl.org/heals/eo#user> ;
+          feo:likes feo:Cheese .
+
+feo:Cheese rdf:type owl:NamedIndividual ,
+			<https://purl.org/heals/food/Food>.
+
+
 feo:ButternutSquashSoup rdf:type food:Food;
-    feo:hasIngredient ButternutSquash;
-    feo:hasCharacteristic Autumn;
+    feo:hasIngredient feo:ButternutSquash;
+    feo:hasCharacteristic feo:Autumn;
     rdfs:label "Butternut Squash Soup" .
 
 feo:ButternutSquash 
