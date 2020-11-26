@@ -27,7 +27,7 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-<http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type owl:NamedIndividual, eo:Question;
+<http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type eo:Question;
 	feo:hasParameter feo:Butternut_Squash_Soup;
 	rdfs:label "Why should I eat Butternut Squash Soup?"  .
 
