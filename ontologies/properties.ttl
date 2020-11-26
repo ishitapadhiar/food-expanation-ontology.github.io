@@ -30,3 +30,5 @@
 feo:UserA rdf:type owl:NamedIndividual ,
                    <https://purl.org/heals/eo#user> ;
           feo:likes feo:Cheese .
+feo:Cheese a food:Food .
+feo:likes rdfs:subPropertyOf feo:hasCharacteristic .
