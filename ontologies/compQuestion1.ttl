@@ -36,14 +36,13 @@ feo:ButternutSquashSoup
     rdfs:label "Butternut Squash Soup" .
 
 feo:ButternutSquash 
-    a food:Food,
-    food:Ingredient;
+    a food:Food;
     feo:isAvailibleIn feo:Autumn;
     rdfs:label "Butternut Squash" .
 
 feo:Autumn
-	a feo:Season,
-	feo:SeasonCharacteristic;
+	a feo:Season;
+	a feo:SeasonCharacteristic;
 	feo:inRelationshipTo feo:SystemA.
 
 feo:SystemA
