@@ -43,7 +43,9 @@ feo:Autumn
 	a feo:SeasonCharacteristic;
 	feo:inRelationTo feo:SystemA.
 
-feo:SystemA a feo:System.
+feo:SystemA rdf:type owl:NamedIndividual ,
+	feo:System ;
+	feo:isInSeason feo:Autumn .
 
 
 
