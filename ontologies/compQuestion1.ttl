@@ -33,7 +33,7 @@
 
 
 feo:Butternut_Squash_Soup rdf:type food:Food;
-    feo:hasIngredient feo:ButternutSquash;
+    food:hasIngredient feo:ButternutSquash;
     feo:hasCharacteristic feo:Autumn;
     rdfs:label "Butternut Squash Soup" .
 
