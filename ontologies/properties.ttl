@@ -49,7 +49,8 @@ feo:forbiddenBy a owl:ObjectProperty;
 	owl:inverseOf feo:forbids .
 
 feo:allows a owl:ObjectProperty;
-	rdfs:subPropertyOf feo:isSupportedBy .
+	rdfs:subPropertyOf feo:isSupportedBy;
+	owl:inverseOf feo:allowedBy .
 
 feo:likes a owl:ObjectProperty;
 	rdfs:subPropertyOf feo:isSupportedBy .
@@ -61,7 +62,8 @@ feo:dislikes a owl:ObjectProperty;
 	rdfs:subPropertyOf feo:isOpposedBy .
 
 feo:forbids a owl:ObjectProperty;
-	rdfs:subPropertyOf feo:isOpposedBy .
+	rdfs:subPropertyOf feo:isOpposedBy;
+	owl:inverseOf feo:forbiddenBy .
 
 feo:hasCharacteristic a owl:ObjectProperty.
 feo:isSupportedBy a owl:ObjectProperty.
