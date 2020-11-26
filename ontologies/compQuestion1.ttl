@@ -27,7 +27,7 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-feo:ContextualQuestion 
+feo:Why_eat_Butternut_Squash_Soup? 
     a eo:Question;
     feo:hasParameter feo:ButternutSquashSoup;
     rdfs:label "Why should I eat Butternut Squash Soup?" .
