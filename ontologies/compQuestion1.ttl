@@ -35,7 +35,7 @@ feo:ButternutSquashSoup rdf:type food:Food;
 
 feo:ButternutSquash 
     a food:Food;
-    feo:isAvailibleIn feo:Autumn;
+    feo:isAvailableIn feo:Autumn;
     rdfs:label "Butternut Squash" .
 
 feo:Autumn
@@ -50,7 +50,7 @@ feo:SystemA rdf:type owl:NamedIndividual ,
 
 
 food:hasIngredient a owl:ObjectProperty .
-feo:isAvailbleIn a owl:ObjectProperty .
+feo:isAvailableIn a owl:ObjectProperty .
 feo:hasParameter a owl:ObjectProperty .
 feo:inRelationTo a owl:ObjectProperty .
 feo:hasCharacteristic a owl:ObjectProperty .
