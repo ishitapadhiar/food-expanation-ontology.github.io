@@ -32,7 +32,7 @@ feo:UserA rdf:type owl:NamedIndividual ,
           feo:likes feo:Cheese .
 
 feo:Cheese rdf:type owl:NamedIndividual ,
-			food:Food.
+			<https://purl.org/heals/food/Food>.
 
 
 feo:likes a owl:ObjectProperty;
