@@ -27,33 +27,41 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-feo:UserA rdf:type owl:NamedIndividual ,
-                   <https://purl.org/heals/eo#user> ;
-          feo:likes feo:Cheese .
+feo:ContextualQuestion 
+    a eo:Question;
+    feo:hasParameter feo:ButternutSquashSoup;
+    rdfs:label "Why should I eat Butternut Squash Soup?" .
 
-feo:Cheese rdf:type owl:NamedIndividual ,
-			<https://purl.org/heals/food/Food>.
-
-
-feo:ButternutSquashSoup rdf:type food:Food;
+feo:ButternutSquashSoup 
+    a food:Food;
     feo:hasIngredient feo:ButternutSquash;
     feo:hasCharacteristic feo:Autumn;
     rdfs:label "Butternut Squash Soup" .
 
 feo:ButternutSquash 
-    a food:Food;
+    a food:Food,
+    food:Ingredient;
     feo:isAvailibleIn feo:Autumn;
     rdfs:label "Butternut Squash" .
 
 feo:Autumn
-	a feo:Season;
-	a feo:SeasonCharacteristic;
+	a feo:Season,
+	feo:SeasonCharacteristic;
 	feo:inRelationshipTo feo:SystemA.
 
+feo:SeasonCharacteristic rdf:type owl:Class ;
+	owl:equivalentClass [ owl:intersectionOf ( feo:Season
+		[ rdf:type owl:Restriction ;
+			owl:onProperty resource:SIO_000668 ;
+			owl:someValuesFrom feo:System
+		]
+	) ;
+	rdf:type owl:Class] .
 
-
-food:hasIngredient a owl:ObjectProperty .
-feo:isAvailbleIn a owl:ObjectProperty .
-feo:hasParameter a owl:ObjectProperty .
-feo:inRelationTo a owl:ObjectProperty .
-feo:hasCharacteristic a owl:ObjectProperty .
+feo:SystemA
+	a feo:System.
+feo:Season a owl:class;
+	feo:isInternal True.
+food:Food a owl:class.
+eo:Question a owl:class.
+feo:System a owl:class.
