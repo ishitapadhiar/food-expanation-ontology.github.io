@@ -27,12 +27,6 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-food:Food a owl:class.
-eo:Question a owl:class.
-food:Food a owl:class.
-
-
-
 food:hasIngredient a owl:ObjectProperty.
 feo:isAvailbleIn a owl:ObjectProperty.
 feo:hasParameter a owl:ObjectProperty.
