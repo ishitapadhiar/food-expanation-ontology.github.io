@@ -27,20 +27,15 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-feo:ContextualQuestion 
-    a eo:Question;
-    feo:hasParameter feo:ButternutSquashSoup;
-    rdfs:label "Why should I eat Butternut Squash Soup?" .
 
-feo:ButternutSquashSoup 
-    a food:Food;
-    feo:hasIngredient ButternutSquash;
-    feo:hasCharacteristic Autumn;
-    rdfs:label "Butternut Squash Soup" .
+feo:Food a owl:class.
+feo:Question a owl:class.
+feo:Food a owl:class.
 
-feo:ButternutSquash 
-    a food:Food,
-    food:Ingredient;
-    feo:isAvailibleIn feo:Autumn;
-    rdfs:label "Butternut Squash" .
 
+
+food:hasIngredient a owl:ObjectProperty.
+feo:isAvailbleIn a owl:ObjectProperty.
+feo:hasParameter a owl:ObjectProperty.
+feo:inRelationTo a owl:ObjectProperty.
+feo:hasCharacteristic a owl:ObjectProperty.
