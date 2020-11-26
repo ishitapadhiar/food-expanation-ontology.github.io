@@ -59,7 +59,7 @@ feo:Season rdf:type owl:Class ;
 feo:SeasonCharacteristic rdf:type owl:Class ;
 	owl:equivalentClass [ owl:intersectionOf ( feo:Season
 		[ rdf:type owl:Restriction ;
-			owl:onProperty resource:SIO_000668 ;
+			owl:onProperty feo:inRelationTo ;
 			owl:someValuesFrom feo:System
         ]
 	) ;
