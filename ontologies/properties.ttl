@@ -28,7 +28,43 @@
 
 
 
-feo:likes a owl:ObjectProperty;
+food:hasIngredient a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:hasCharacteristic .
+	
+feo:isAvailbleIn a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:hasCharacteristic .
+	
+feo:hasParameter a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:hasCharacteristic .
+	
+feo:hasNutrient a owl:ObjectProperty;
 	rdfs:subPropertyOf feo:hasCharacteristic .
 
+feo:allowedBy a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:hasCharacteristic;
+	owl:inverseOf feo:allows .
+
+feo:forbiddenBy a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:hasCharacteristic;
+	owl:inverseOf feo:forbids .
+
+feo:allows a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:isSupportedBy .
+
+feo:likes a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:isSupportedBy .
+
+feo:allergicTo a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:isOpposedBy .
+
+feo:dislikes a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:isOpposedBy .
+
+feo:forbids a owl:ObjectProperty;
+	rdfs:subPropertyOf feo:isOpposedBy .
+
 feo:hasCharacteristic a owl:ObjectProperty.
+feo:isSupportedBy a owl:ObjectProperty.
+feo:isOpposedBy a owl:ObjectProperty.
+
+feo:allows a owl:ObjectProperty.
