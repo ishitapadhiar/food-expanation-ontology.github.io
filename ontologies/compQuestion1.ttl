@@ -49,15 +49,6 @@ feo:Autumn
 	feo:SeasonCharacteristic;
 	feo:inRelationshipTo feo:SystemA.
 
-feo:SeasonCharacteristic rdf:type owl:Class ;
-	owl:equivalentClass [ owl:intersectionOf ( feo:Season
-		[ rdf:type owl:Restriction ;
-			owl:onProperty resource:SIO_000668 ;
-			owl:someValuesFrom feo:System
-		]
-	) ;
-	rdf:type owl:Class] .
-
 feo:SystemA
 	a feo:System.
 feo:Season a owl:class;
