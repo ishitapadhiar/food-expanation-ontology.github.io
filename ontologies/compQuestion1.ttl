@@ -28,10 +28,11 @@
 
 
 <http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type owl:NamedIndividual ;
-	feo:hasParameter feo:Butternut_Squash_Soup .
+	feo:hasParameter feo:Butternut_Squash_Soup;
+	rdfs:label "Why should I eat Butternut Squash Soup?"  .
 
 
-feo:ButternutSquashSoup rdf:type food:Food;
+feo:Butternut_Squash_Soup rdf:type food:Food;
     feo:hasIngredient feo:ButternutSquash;
     feo:hasCharacteristic feo:Autumn;
     rdfs:label "Butternut Squash Soup" .
