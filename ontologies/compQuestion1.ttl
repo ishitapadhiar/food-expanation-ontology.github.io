@@ -26,6 +26,16 @@
 @prefix : <http://www.semanticweb.org/ishitapadhiar/ontologies/2020/10/inferredfeo2> .
 @prefix food: <http://purl.org/heals/food/> .
 
+ .
+
+feo:SystemA
+	a feo:System.
+feo:Season a owl:class;
+	feo:isInternal True.
+food:Food a owl:class.
+eo:Question a owl:class.
+feo:System a owl:class.
+
 
 food:hasIngredient a owl:ObjectProperty.
 feo:isAvailbleIn a owl:ObjectProperty.
