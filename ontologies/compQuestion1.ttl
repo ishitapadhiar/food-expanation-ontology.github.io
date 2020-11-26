@@ -27,7 +27,7 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-<http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type owl:NamedIndividual ;
+<http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type owl:NamedIndividual, eo:Question;
 	feo:hasParameter feo:Butternut_Squash_Soup;
 	rdfs:label "Why should I eat Butternut Squash Soup?"  .
 
@@ -56,6 +56,15 @@ feo:Season rdf:type owl:Class ;
 			owl:hasValue "false"^^xsd:boolean
         ] .
 
+feo:SeasonCharacteristic rdf:type owl:Class ;
+	owl:equivalentClass [ owl:intersectionOf ( feo:Season
+		[ rdf:type owl:Restriction ;
+			owl:onProperty resource:SIO_000668 ;
+			owl:someValuesFrom feo:System
+        ]
+	) ;
+	rdf:type owl:Class
+	] .
 
 
 food:hasIngredient a owl:ObjectProperty .
