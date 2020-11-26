@@ -44,22 +44,3 @@ feo:ButternutSquash
     feo:isAvailibleIn feo:Autumn;
     rdfs:label "Butternut Squash" .
 
-feo:Autumn
-	a feo:Season,
-	feo:SeasonCharacteristic;
-	feo:inRelationshipTo feo:SystemA.
-
-feo:SystemA
-	a feo:System.
-
-feo:Season a owl:class.
-feo:Food a owl:class.
-feo:Question a owl:class.
-feo:Food a owl:class.
-
-
-food:hasIngredient a owl:ObjectProperty.
-feo:isAvailbleIn a owl:ObjectProperty.
-feo:hasParameter a owl:ObjectProperty.
-feo:inRelationTo a owl:ObjectProperty.
-feo:hasCharacteristic a owl:ObjectProperty.
