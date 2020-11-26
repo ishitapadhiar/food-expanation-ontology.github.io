@@ -49,14 +49,14 @@ feo:Autumn
 
 feo:SystemA rdf:type feo:System .
 
-feo:Season a owl:class;
+feo:Season rdf:type owl:Class ;
 	rdfs:subClassOf 
 		[ rdf:type owl:Restriction ;
 			owl:onProperty feo:isInternal ;
 			owl:hasValue "false"^^xsd:boolean
         ] .
 
-feo:SeasonCharacteristic a owl:class; 
+feo:SeasonCharacteristic rdf:type owl:Class ;  
 	owl:equivalentClass [ owl:intersectionOf ( feo:Season
 		[ rdf:type owl:Restriction ;
 			owl:onProperty feo:inRelationTo ;
