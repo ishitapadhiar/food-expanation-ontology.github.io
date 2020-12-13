@@ -62,15 +62,18 @@ Where{
 }
 ```
 
-3. **Contrastive** - "What if it was Spring?"
+3. **Contrastive** - "What if I was pregnant?"
 
 ```
 PREFIX feo: <http://purl.org/heals/food-explanation-ontology/>
 PREFIX food: <http://purl.org/heals/food/>
-SELECT Distinct ?parameter ?outputs
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+SELECT Distinct ?parameter ?prop ?outputs
 WHERE{
-feo:WhatIfItWereSpring  feo:hasParameter ?parameter .
-?parameter feo:isCharacteristicOf ?outputs .
+feo:WhatIfIWasPregnant  feo:hasParameter ?parameter .
+?parameter ?prop  ?outputs .
+?prop rdfs:subPropertyOf feo:isCharacteristicOf.
 ?outputs a food:Food .
 }
 ```
