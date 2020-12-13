@@ -71,9 +71,9 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT Distinct ?parameter ?prop ?outputs
 WHERE{
-feo:WhatIfIWasPregnant  feo:hasParameter ?parameter .
-?parameter ?prop  ?outputs .
-?prop rdfs:subPropertyOf feo:isCharacteristicOf.
-?outputs a food:Food .
+  feo:WhatIfIWasPregnant  feo:hasParameter ?parameter .
+  ?parameter ?prop  ?outputs .
+  ?prop rdfs:subPropertyOf feo:isCharacteristicOf.
+  ?outputs a food:Food .
 }
 ```
