@@ -20,14 +20,15 @@ python src/runfeo.py
 
 ## Competency Questions
 
-1. **Contextual** - "Why should I eat Butternut Squash Soup?"
+1. **Contextual** - "Why should I eat Cauliflower Potato Curry?"
 
 ```
 prefix feo: <http://purl.org/heals/food-explanation-ontology/>
+PREFIX eo: <http://purl.org/heals/eo#>
 
 SELECT DISTINCT ?characteristic ?classes
 WHERE{
-  ?question feo:hasParameter ?parameter .
+  ?WhyEatCauliflowerPotatoCurry feo:hasParameter ?parameter .
   ?parameter feo:hasCharacteristic ?characteristic .
   ?characteristic feo:isInternal False .
   ?systemChar a feo:SystemCharacteristic .
@@ -35,6 +36,7 @@ WHERE{
   filter ( ?characteristic = ?systemChar || ?characteristic = ?userChar ) .
   ?characteristic a ?classes .
   ?classes rdfs:subClassOf feo:Characteristic .
+  Filter Not Exists{?classes rdfs:subClassOf <https://purl.org/heals/eo#knowledge> }.
 }
 ```
 
