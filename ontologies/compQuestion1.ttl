@@ -27,20 +27,25 @@
 @prefix food: <http://purl.org/heals/food/> .
 
 
-<http://purl.org/heals/food-explanation-ontology/Why_eat_Butternut_Squash_Soup?> rdf:type eo:Question;
-	feo:hasParameter feo:Butternut_Squash_Soup;
-	rdfs:label "Why should I eat Butternut Squash Soup?"  .
+<http://purl.org/heals/food-explanation-ontology/WhyEatCauliflowerPotatoCurry> rdf:type eo:Question;
+	feo:hasParameter feo:CauliflowerPotatoCurry;
+	rdfs:label "Why should I eat Cauliflower Potato Curry?"  .
 
 
-feo:Butternut_Squash_Soup rdf:type food:Food;
-    food:hasIngredient feo:ButternutSquash;
+feo:CauliflowerPotatoCurry rdf:type food:Food;
+    food:hasIngredient feo:Cauliflower;
+    food:hasIngredient feo:Potato;
     feo:hasCharacteristic feo:Autumn;
-    rdfs:label "Butternut Squash Soup" .
+    rdfs:label "Cauliflower Potato Curry" .
 
-feo:ButternutSquash 
+feo:Cauliflower 
     a food:Food;
     feo:isAvailableIn feo:Autumn;
-    rdfs:label "Butternut Squash" .
+    rdfs:label "Cauliflower" .
+
+feo:Potato 
+    a food:Food;
+    rdfs:label "Potato" .
 
 feo:Autumn
 	a feo:Season;
