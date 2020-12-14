@@ -43,7 +43,6 @@ WHERE{
 2. **Counterfactual** - "Why should I eat Butternut Squash Soup over a Strawberry Tart"
 
 ```
-PREFIX feo: <http://purl.org/heals/food-explanation-ontology/>
 PREFIX food: <http://purl.org/heals/food/>
 PREFIX eo: <http://purl.org/heals/eo#>
 
@@ -56,11 +55,16 @@ Where{
   ?factA a <https://purl.org/heals/eo#Fact>.
   ?factA a ?factType .
   ?factType (rdfs:subClassOf+) feo:Characteristic .
+  Filter Not Exists{?factType rdfs:subClassOf <https://purl.org/heals/eo#knowledge> }.
+  Filter Not Exists{?s rdfs:subClassOf ?factType}.
   
   ?parameterB feo:hasCharacteristic ?foilB .
   ?foilB a <https://purl.org/heals/eo#Foil> .
   ?foilB a ?foilType.
   ?foilType (rdfs:subClassOf+) feo:Characteristic .
+  Filter Not Exists{?foilType rdfs:subClassOf <https://purl.org/heals/eo#knowledge> }.
+  Filter Not Exists{?t rdfs:subClassOf ?foilType}.
+
 }
 ```
 
