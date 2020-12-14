@@ -580,16 +580,16 @@ feo:HighBudgetFood rdf:type owl:Class ;
 ###  http://purl.org/heals/food-explanation-ontology/InBudgetCharacteristic
 feo:InBudgetCharacteristic rdf:type owl:Class ;
                            owl:equivalentClass [ owl:intersectionOf ( food:Food
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty feo:componentOf ;
-                                                                        owl:someValuesFrom [ owl:intersectionOf ( feo:Budget
-                                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                                    owl:onProperty feo:isBudgetFor ;
-                                                                                                                    owl:someValuesFrom <https://purl.org/heals/eo#user>
-                                                                                                                  ]
-                                                                                                                ) ;
-                                                                                             rdf:type owl:Class
-                                                                                           ]
+                                                                      [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty feo:componentOf ;
+                                                                                               owl:someValuesFrom feo:Budget
+                                                                                             ]
+                                                                                             [ rdf:type owl:Restriction ;
+                                                                                               owl:onProperty feo:isBudgetFor ;
+                                                                                               owl:someValuesFrom <https://purl.org/heals/eo#user>
+                                                                                             ]
+                                                                                           ) ;
+                                                                        rdf:type owl:Class
                                                                       ]
                                                                     ) ;
                                                  rdf:type owl:Class
@@ -946,6 +946,19 @@ feo:Butternut_Squash_Soup rdf:type owl:NamedIndividual ,
                           feo:hasPrice 12 .
 
 
+###  http://purl.org/heals/food-explanation-ontology/Cauliflower
+feo:Cauliflower rdf:type owl:NamedIndividual ,
+                         obo:FOODON_03400644 ;
+                feo:isAvailibleIn feo:Autumn .
+
+
+###  http://purl.org/heals/food-explanation-ontology/CauliflowerPotatoCurry
+feo:CauliflowerPotatoCurry rdf:type owl:NamedIndividual ,
+                                    food:Food ;
+                           food:hasIngredient feo:Cauliflower ,
+                                              feo:Potato .
+
+
 ###  http://purl.org/heals/food-explanation-ontology/Cheese
 feo:Cheese rdf:type owl:NamedIndividual ,
                     obo:FOODON_03400775 .
@@ -990,6 +1003,11 @@ feo:PescatarianDiet rdf:type owl:NamedIndividual ,
                              feo:Diet .
 
 
+###  http://purl.org/heals/food-explanation-ontology/Potato
+feo:Potato rdf:type owl:NamedIndividual ,
+                    obo:FOODON_03400644 .
+
+
 ###  http://purl.org/heals/food-explanation-ontology/PregnancyDiet
 feo:PregnancyDiet rdf:type owl:NamedIndividual ,
                            feo:Diet .
@@ -1015,6 +1033,13 @@ feo:Strawberry_Tart rdf:type owl:NamedIndividual ,
 ###  http://purl.org/heals/food-explanation-ontology/Summer
 feo:Summer rdf:type owl:NamedIndividual ,
                     feo:Season .
+
+
+###  http://purl.org/heals/food-explanation-ontology/Sushi
+feo:Sushi rdf:type owl:NamedIndividual ,
+                   food:Food ;
+          feo:forbiddenBy feo:PregnancyDiet ;
+          food:hasIngredient feo:Tuna .
 
 
 ###  http://purl.org/heals/food-explanation-ontology/System-Characteristic
@@ -1057,10 +1082,22 @@ feo:VegetarianDiet rdf:type owl:NamedIndividual ,
                             feo:Diet .
 
 
+###  http://purl.org/heals/food-explanation-ontology/WhatIfIWasPregnant
+feo:WhatIfIWasPregnant rdf:type owl:NamedIndividual ;
+                       feo:hasParameter feo:PregnancyDiet ;
+                       rdfs:label "What if I was pregnant?" .
+
+
 ###  http://purl.org/heals/food-explanation-ontology/WhatIfItWereSpring
 feo:WhatIfItWereSpring rdf:type owl:NamedIndividual ;
                        feo:hasParameter feo:Spring ;
                        rdfs:label "What if it were spring?" .
+
+
+###  http://purl.org/heals/food-explanation-ontology/WhyEatCauliflowerPotatoCurry
+feo:WhyEatCauliflowerPotatoCurry rdf:type owl:NamedIndividual ;
+                                 feo:hasParameter feo:CauliflowerPotatoCurry ;
+                                 rdfs:label "Why eat Cauliflower Potato Curry?" .
 
 
 ###  http://purl.org/heals/food-explanation-ontology/Winter
